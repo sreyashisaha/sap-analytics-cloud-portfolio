@@ -1,58 +1,117 @@
-📊 SAP Analytics Cloud — Sales Analytics Portfolio
+# 📊 SAP Analytics Cloud — Sales Analytics Portfolio
 
-A end-to-end Sales Analytics story built in SAP Analytics Cloud (SAC), demonstrating core BI skills including KPI dashboards, time series analysis, cross tables with variance, combo charts, and AI-assisted exploration.
+> A end-to-end Sales Analytics story built in SAP Analytics Cloud (SAC), demonstrating core BI skills including KPI dashboards, time series analysis, cross tables with variance, combo charts, and AI-assisted exploration.
 
-🔗 Live Tenant
-FieldDetailSAC Tenantacademy-t-sac.eu10.hcs.cloud.sapData SourceSales_Transactions_2020_2025 (SAC Samples)Time Range2020 – 2025Story TypeOptimized Design ModeThemeSAP Morning Horizon
+---
 
-📁 Story Structure
-Page 1 — Sales Overview
+## 🔗 Live Tenant
 
-High-level KPI snapshot and trend analysis
+| Field | Detail |
+|---|---|
+| **SAC Tenant** | [academy-t-sac.eu10.hcs.cloud.sap](https://academy-t-sac.eu10.hcs.cloud.sap) |
+| **Data Source** | `Sales_Transactions_2020_2025` (SAC Samples) |
+| **Time Range** | 2020 – 2025 |
+| **Story Type** | Optimized Design Mode |
+| **Theme** | SAP Morning Horizon |
 
-WidgetTypeMeasures / DimensionsTotal Net SalesKPI Tile (Numeric Point)NetValueTotal QuantityKPI Tile (Numeric Point)QuantityAvg Order ValueKPI Tile (Numeric Point)NetValue / TransactionsTotal TransactionsKPI Tile (Numeric Point)CountSales TrendTime Series Line ChartNetValue over SalesDateSales by Product GroupBar ChartNetValue × ProductGroup
-Features used: Reference Line, Threshold, Morning Horizon theme
+---
 
-Page 2 — Sales Analysis
+## 📁 Story Structure
 
-Deep-dive cross-tabular and trend analysis with interactive filters
+### Page 1 — Sales Overview
+> High-level KPI snapshot and trend analysis
 
-WidgetTypeMeasures / DimensionsSales by Product Group & YearCross TableNetValue, Quantity × ProductGroup × YearVariance (Absolute & %)Cross Table columnvs. Previous YearSales Trend by Product GroupMulti-line ChartNetValue × SalesDate × ProductGroupSales by Distribution ChannelBar ChartNetValue × DistrChannelProduct Group FilterDimension Input ControlProductGroupYear FilterInput ControlSalesDate (Year)
-Features used: Variance columns, Linked Analysis, Input Control
+| Widget | Type | Measures / Dimensions |
+|---|---|---|
+| Total Net Sales | KPI Tile (Numeric Point) | NetValue |
+| Total Quantity | KPI Tile (Numeric Point) | Quantity |
+| Avg Order Value | KPI Tile (Numeric Point) | NetValue / Transactions |
+| Total Transactions | KPI Tile (Numeric Point) | Count |
+| Sales Trend | Time Series Line Chart | NetValue over SalesDate |
+| Sales by Product Group | Bar Chart | NetValue × ProductGroup |
 
-Page 3 — Sales Order Analysis
+**Features used:** Reference Line, Threshold, Morning Horizon theme
 
-Order-level quantity and revenue analysis with combo chart
+---
 
-WidgetTypeMeasures / DimensionsQuantity by Product GroupHorizontal Bar ChartQuantity × ProductGroupQuantity Sold Over TimeMulti-line ChartQuantity × SalesDate × ProductGroupRevenue vs. QuantityCombo Chart (Bar + Line)NetValue (bars) + Quantity (line) × ProductGroupAI Commenting / JustAskSmart FeatureNatural language data exploration
-Features used: Combo chart with secondary axis, Smart Insights / JustAsk
+### Page 2 — Sales Analysis
+> Deep-dive cross-tabular and trend analysis with interactive filters
 
-📐 Data Model
-Model: Sales_Transactions_2020_2025
-Location: My Files → Samples
-FieldTypeDescriptionNetValueMeasureRevenue in EUR (millions)QuantityMeasureUnits sold (thousands)ProductGroupDimensionElectronics, Food, FurnitureSalesDateTime DimensionDaily, aggregated by Year/MonthDistrChannelDimensionDistribution channelDivisionDimensionBusiness divisionCustomerNameDimensionCustomerSalesOrgDimensionSales organisationCompanyCodeDimensionLegal entity
+| Widget | Type | Measures / Dimensions |
+|---|---|---|
+| Sales by Product Group & Year | Cross Table | NetValue, Quantity × ProductGroup × Year |
+| Variance (Absolute & %) | Cross Table column | vs. Previous Year |
+| Sales Trend by Product Group | Multi-line Chart | NetValue × SalesDate × ProductGroup |
+| Sales by Distribution Channel | Bar Chart | NetValue × DistrChannel |
+| Product Group Filter | Dimension Input Control | ProductGroup |
+| Year Filter | Input Control | SalesDate (Year) |
 
-📸 Screenshots
+**Features used:** Variance columns, Linked Analysis, Input Control
 
-Screenshots of each page are located in the /screenshots folder.
+---
 
-File                                Description
-page1-sales-overview.png            KPI tiles + time series + bar chart
-page2-sales-analysis.png            Cross table with variance + filters
-page3-sales-order-analysis.png      Combo chart + quantity charts
+### Page 3 — Sales Order Analysis
+> Order-level quantity and revenue analysis with combo chart
 
+| Widget | Type | Measures / Dimensions |
+|---|---|---|
+| Quantity by Product Group | Horizontal Bar Chart | Quantity × ProductGroup |
+| Quantity Sold Over Time | Multi-line Chart | Quantity × SalesDate × ProductGroup |
+| Revenue vs. Quantity | Combo Chart (Bar + Line) | NetValue (bars) + Quantity (line) × ProductGroup |
+| AI Commenting / JustAsk | Smart Feature | Natural language data exploration |
 
-🚀 How to Explore This Story
+**Features used:** Combo chart with secondary axis, Smart Insights / JustAsk
 
-Log in to the SAC tenant linked above
-Navigate to My Files → Samples
-Open the story: Sales Analytics Portfolio
-Use the input controls on Page 2 to filter by Product Group, Year, or switch between NetValue and Quantity
-Explore Page 3 for order-level analysis and AI insights
+---
 
-👤 Author
-GE303485 SAC Academy Student — SAP Analytics Cloud Fundamentals
+## 📐 Data Model
 
-📄 License
+**Model:** `Sales_Transactions_2020_2025`
+**Location:** My Files → Samples
+
+| Field | Type | Description |
+|---|---|---|
+| `NetValue` | Measure | Revenue in EUR (millions) |
+| `Quantity` | Measure | Units sold (thousands) |
+| `ProductGroup` | Dimension | Electronics, Food, Furniture |
+| `SalesDate` | Time Dimension | Daily, aggregated by Year/Month |
+| `DistrChannel` | Dimension | Distribution channel |
+| `Division` | Dimension | Business division |
+| `CustomerName` | Dimension | Customer |
+| `SalesOrg` | Dimension | Sales organisation |
+| `CompanyCode` | Dimension | Legal entity |
+
+---
+
+## 📸 Screenshots
+
+> Screenshots of each page are located in the `/screenshots` folder.
+
+| File | Description |
+|---|---|
+| `page1-sales-overview.png` | KPI tiles + time series + bar chart |
+| `page2-sales-analysis.png` | Cross table with variance + filters |
+| `page3-sales-order-analysis.png` | Combo chart + quantity charts |
+
+---
+
+## 🚀 How to Explore This Story
+
+1. Log in to the SAC tenant linked above
+2. Navigate to **My Files → Samples**
+3. Open the story: **Sales Analytics Portfolio**
+4. Use the **input controls** on Page 2 to filter by Product Group, Year, or switch between NetValue and Quantity
+5. Explore **Page 3** for order-level analysis and AI insights
+---
+
+## 👤 Author
+
+**GE303485**
+SAC Academy Student — SAP Analytics Cloud Fundamentals
+
+---
+
+## 📄 License
+
 This project is for educational/portfolio purposes only.
-Data source: SAP-provided sample data (Sales_Transactions_2020_2025).
+Data source: SAP-provided sample data (`Sales_Transactions_2020_2025`).
