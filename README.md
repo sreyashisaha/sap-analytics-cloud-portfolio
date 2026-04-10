@@ -39,7 +39,7 @@
 
 | Widget | Type | Measures / Dimensions |
 |---|---|---|
-| Sales by Product Group & Year | Cross Table | NetValue, Quantity × ProductGroup × Year |
+| Sales by Product Group & Year | Cross Table | NetValue × ProductGroup × Year |
 | Variance (Absolute & %) | Cross Table column | vs. Previous Year |
 | Sales Trend by Product Group | Multi-line Chart | NetValue × SalesDate × ProductGroup |
 | Sales by Distribution Channel | Bar Chart | NetValue × DistrChannel |
@@ -55,7 +55,7 @@
 
 | Widget | Type | Measures / Dimensions |
 |---|---|---|
-| Quantity by Product Group | Horizontal Bar Chart | Quantity × ProductGroup |
+| Sales Order by Product Group & Year  | Cross Table | Quantity × ProductGroup × Year  |
 | Quantity Sold Over Time | Multi-line Chart | Quantity × SalesDate × ProductGroup |
 | Revenue vs. Quantity | Combo Chart (Bar + Line) | NetValue (bars) + Quantity (line) × ProductGroup |
 | AI Commenting / JustAsk | Smart Feature | Natural language data exploration |
